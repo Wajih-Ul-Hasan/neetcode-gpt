@@ -9,5 +9,7 @@ class Solution:
         # Hint: subtract max(z) for numerical stability before computing exp
         # return np.round(your_answer, 4)
         shifted_z = z - np.max(z)
-        result= np.exp(shifted_z)  / np.sum(np.exp(shifted_z))
+
+        exp_z = np.exp(shifted_z)
+        result = exp_z  / np.sum(exp_z)
         return np.round(result,4)
